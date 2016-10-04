@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int i = r.nextInt(colours.length);
                 background.setBackgroundColor(Color.parseColor(colours[i]));
+
+                Toast.makeText(MainActivity.this, colours[i], Toast.LENGTH_SHORT).show();
             }
         });
     }
